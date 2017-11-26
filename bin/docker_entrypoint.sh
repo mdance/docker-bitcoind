@@ -39,7 +39,10 @@ rpcport=${BTC_RPCPORT:-8332}
 printtoconsole=${BTC_PRINTTOCONSOLE:-1}
 
 # We probably don't want to mine, and thus don't need a wallet.
-disablewallet=1
+disablewallet=${BTC_DISABLEWALLET:-1}
+
+# If we want to keep an index of all transactions
+txindex=${BTC_TXINDEX:-0}
 EOF
 fi
 
