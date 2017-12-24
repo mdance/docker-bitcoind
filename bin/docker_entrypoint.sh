@@ -18,6 +18,9 @@ if [ ! -e "${BITCOIN_CONF}" ]; then
 # the wiki: 
 #   https://en.bitcoin.it/wiki/Running_Bitcoin
 
+# enable prune mode support (0=disabled, 1=RPC auto, > 550 stay under targetted MB)
+-prune=${BTC_PRUNE:-0}
+
 # server=1 tells Bitcoin-Qt and bitcoind to accept JSON-RPC commands
 server=1
 
