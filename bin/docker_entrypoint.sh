@@ -46,6 +46,9 @@ disablewallet=${BTC_DISABLEWALLET:-1}
 
 # If we want to keep an index of all transactions
 txindex=${BTC_TXINDEX:-0}
+
+# Test net setting
+#testnet=${BTC_TESTNET:-0}
 EOF
 fi
 
