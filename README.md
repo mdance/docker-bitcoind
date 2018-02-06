@@ -1,13 +1,15 @@
 
 # docker-bitcoind
 
-[![Docker Stars](https://img.shields.io/docker/stars/jamesob/bitcoind.svg)](https://hub.docker.com/r/jamesob/bitcoind/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jamesob/bitcoind.svg)](https://hub.docker.com/r/jamesob/bitcoind/)
+Updated on 2018-02-05.
 
-*Running a full node ain't never been so easy!*
+[![Docker Stars](https://img.shields.io/docker/stars/bcawthra/bitcoind.svg)](https://hub.docker.com/r/bcawthra/bitcoind/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/bcawthra/bitcoind.svg)](https://hub.docker.com/r/bcawthra/bitcoind/)
 
 A Docker configuration with sane defaults for running a full validating 
 Bitcoin node.
+
+Credits to https://github.com/jamesob/docker-bitcoind.
 
 ## Quick start
 
@@ -28,7 +30,6 @@ $ docker run --name bitcoind -d \
 $ docker logs -f bitcoind
 [ ... ]
 ```
-
 
 ## Configuration
 
@@ -74,9 +75,7 @@ ExecStop=/usr/bin/docker stop bitcoind
 to ensure that bitcoind continues to run.
 
 
-## Alternatives
+## Other References
 
-- [docker-bitcoind](https://github.com/kylemanna/docker-bitcoind): sort of the
-  basis for this repo, but configuration is a bit more confusing. 
-- [docker-bitcoin](https://github.com/amacneil/docker-bitcoin): more complex, but 
-  more granular versioning. Includes XT & classic.
+- https://github.com/bonovoxly/bitcoin-node - Easily deploy a bitcoin node to AWS or Google Cloud.
+- https://github.com/bonovoxly/gke-bitcoin-node - Easily deploy a bitcoin node to Google Kubernetes Engine.
