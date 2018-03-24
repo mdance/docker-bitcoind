@@ -3,4 +3,7 @@
 .env
 .env.dist
 README.md
+build-image.sh
+push-image.sh
 start-container.sh
+data
