@@ -10,10 +10,10 @@ jobs:
 
      # build the application image
      - run: |
-         docker build -t bcawthra/bitcoind:${CIRCLE_BUILD_NUM} .
-         docker tag bcawthra/bitcoind:${CIRCLE_BUILD_NUM} bcawthra/bitcoind:latest
+         docker build -t mdance/bitcoind:${CIRCLE_BUILD_NUM} .
+         docker tag mdance/bitcoind:${CIRCLE_BUILD_NUM} mdance/bitcoind:latest
 
      # deploy the image
      - run: |
-         docker push bcawthra/bitcoind:${CIRCLE_BUILD_NUM}
-         docker push bcawthra/bitcoind:latest
+         docker push mdance/bitcoind:${CIRCLE_BUILD_NUM}
+         docker push mdance/bitcoind:latest
