@@ -1,7 +1,9 @@
 FROM ubuntu:16.04
-MAINTAINER James O'Beirne <j@jameso.be>
+MAINTAINER Michael Dance <michael.dance@gmail.com>
 
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8842ce5e && \
+RUN apt-key adv \
+		--keyserver keyserver.ubuntu.com \
+		--recv-keys 8842ce5e && \
     echo "deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu xenial main" \
     > /etc/apt/sources.list.d/bitcoin.list
 
