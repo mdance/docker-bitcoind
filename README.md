@@ -5,14 +5,14 @@ Updated on 2018-02-05.
 
 [![Docker Stars](https://img.shields.io/docker/stars/mdance/bitcoind.svg)](https://hub.docker.com/r/mdance/bitcoind/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/mdance/bitcoind.svg)](https://hub.docker.com/r/mdance/bitcoind/)
-[![CircleCI](https://circleci.com/gh/bonovoxly/docker-bitcoind/tree/master.svg?style=svg)](https://circleci.com/gh/bonovoxly/docker-bitcoind/tree/master)
+[![CircleCI](https://circleci.com/gh/mdance/docker-bitcoind/tree/master.svg?style=svg)](https://circleci.com/gh/mdance/docker-bitcoind/tree/master)
 
 A Docker configuration with sane defaults for running a full validating Bitcoin node. For more info, see:
 
 - Deploying to AWS using Terraform and ansible-pull - <https://blog.billyc.io/2017/11/20/deploying-a-bitcoin-node-using-terraform-and-ansible-pull/>
 - Deploying to Google Cloud using Terraform and ansible-pull - <https://blog.billyc.io/2017/11/23/deploying-a-bitcoin-node-to-google-cloud-using-terraform-and-ansible-pull/>
-- Github repo for using Terraform and ansible-pull (AWS and Google Cloud) - <https://github.com/bonovoxly/bitcoin-node>
-- Github repo for deploying to Google Kubernetes Engine - <https://github.com/bonovoxly/gke-bitcoin-node>
+- Github repo for using Terraform and ansible-pull (AWS and Google Cloud) - <https://github.com/mdance/bitcoin-node>
+- Github repo for deploying to Google Kubernetes Engine - <https://github.com/mdance/gke-bitcoin-node>
 
 
 Credits to https://github.com/jamesob/docker-bitcoind for this Docker image.
@@ -31,7 +31,7 @@ $ docker run --name bitcoind -d \
    --volume /home/youruser/bitcoin_data:/bitcoin \
    -p 8332:8332
    --publish 8333:8333
-   bonovoxly/bitcoind:latest
+   mdance/bitcoind:latest
 
 $ docker logs -f bitcoind
 [ ... ]
@@ -73,13 +73,13 @@ Requires=docker.service
 [Service]
 ExecStartPre=-/usr/bin/docker kill bitcoind
 ExecStartPre=-/usr/bin/docker rm bitcoind
-ExecStartPre=/usr/bin/docker pull bonovoxly/bitcoind:latest
+ExecStartPre=/usr/bin/docker pull mdance/bitcoind:latest
 ExecStart=/usr/bin/docker run \
     --name bitcoind \
     -p 8333:8333 \
     -p 8332:8332 \
     -v /data/bitcoind:/bitcoin \
-    bonovoxly/bitcoind:latest
+    mdance/bitcoind:latest
 ExecStop=/usr/bin/docker stop bitcoind 
 ```
 
@@ -90,6 +90,6 @@ to ensure that bitcoind continues to run.
 
 - <https://blog.billyc.io/2017/11/20/deploying-a-bitcoin-node-using-terraform-and-ansible-pull/>
 - <https://blog.billyc.io/2017/11/23/deploying-a-bitcoin-node-to-google-cloud-using-terraform-and-ansible-pull/>
-- <https://github.com/bonovoxly/bitcoin-node>
-- <https://github.com/bonovoxly/gke-bitcoin-node>
+- <https://github.com/mdance/bitcoin-node>
+- <https://github.com/mdance/gke-bitcoin-node>
 
