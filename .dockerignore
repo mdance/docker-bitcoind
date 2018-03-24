@@ -1,0 +1,6 @@
+.git
+.circleci
+.env
+.env.dist
+README.md
+start-container.sh
